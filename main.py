@@ -30,3 +30,10 @@ def get_items():
     return {
         "items": []
     }
+
+
+@api.get("/health")
+def get_health():
+    return {
+        "health": "ok"
+    }
