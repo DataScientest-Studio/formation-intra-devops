@@ -50,3 +50,14 @@ def test_get_health():
     data = response.json()
 
     assert data.get('health') == "ok", data
+
+
+def test_get_user():
+    response = requests.get(
+        url=f"{API_URL}/user"
+    )
+
+    assert response.status_code == 200, response.content
+    data = response.json()
+
+    assert data.get('name') == "paul", data

@@ -37,3 +37,10 @@ def get_health():
     return {
         "health": "ok"
     }
+
+
+@api.get("/user")
+def get_user():
+    return {
+        "name": "paul"
+    }
