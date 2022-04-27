@@ -39,3 +39,14 @@ def test_get_items():
     data = response.json()
 
     assert len(data.get('items')) == 0, data
+
+
+def test_get_health():
+    response = requests.get(
+        url=f"{API_URL}/health"
+    )
+
+    assert response.status_code == 200, response.content
+    data = response.json()
+
+    assert data.get('health') == "ok", data
