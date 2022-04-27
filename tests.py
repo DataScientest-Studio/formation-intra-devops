@@ -28,3 +28,14 @@ def test_get_mon_get():
     data = response.json()
 
     assert data.get('status') == 1, data
+
+
+def test_get_items():
+    response = requests.get(
+        url=f"{API_URL}/items"
+    )
+
+    assert response.status_code == 200, response.content
+    data = response.json()
+
+    assert len(data.get('items')) == 0, data

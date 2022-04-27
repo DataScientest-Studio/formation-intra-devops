@@ -23,3 +23,10 @@ def get_mon_get():
     return {
         "status": 1
     }
+
+
+@api.get("/items")
+def get_items():
+    return {
+        "items": []
+    }
