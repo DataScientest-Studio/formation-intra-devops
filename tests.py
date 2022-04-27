@@ -61,3 +61,14 @@ def test_get_user():
     data = response.json()
 
     assert data.get('name') == "paul", data
+
+
+def test_get_bye():
+    response = requests.get(
+        url=f"{API_URL}/bye"
+    )
+
+    assert response.status_code == 200, response.content
+    data = response.json()
+
+    assert data.get('bye') == "bye", data
