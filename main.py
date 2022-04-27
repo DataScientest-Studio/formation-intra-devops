@@ -44,3 +44,10 @@ def get_user():
     return {
         "name": "paul"
     }
+
+
+@api.get("/bye")
+def get_bye():
+    return {
+        "bye": "bye"
+    }
